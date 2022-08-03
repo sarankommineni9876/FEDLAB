@@ -1,0 +1,94 @@
+<html>
+    <head>  
+    <title> VoterID Registration Page</title>
+    <script>    
+        var dob =document.form.RegForm.dob.value;
+        a=dob.getFullYear();
+        document.write(a);
+        function checkDetails()
+        {
+            var fname =document.form.RegForm.fname.value;
+            var surname =document.form.RegForm.surname.value;
+            var age =document.form.RegForm.age.value;
+            var gender=document.form.RegForm.gender.value;
+            var dob =document.form.RegForm.dob.value;
+            var aano =document.form.RegForm.aano.value;
+            if (fname == "")
+                {
+                              window.alert("Please enter your name properly");
+                              fname.focus();
+                              return false;
+                        }
+            if (surname == "")
+                {
+                              window.alert("Please enter your surname properly");
+                              surname.focus();
+                              return false;
+                        }
+            if (age=="")
+                {
+                              window.alert("Please enter your age properly");
+                              age.focus();
+                              return false;
+                        }
+            if (gender=="")
+                {
+                              window.alert("Please enter your gender properly");
+                              gender.focus();
+                              return false;
+                        }
+            if (aano=="")
+                {
+                              window.alert("Please enter your AadharNumber properly");
+                              aano.focus();
+                              return false;
+                        }
+           
+                  return true;
+        }
+        function submit()
+        {
+            window.open(/home/3-cse-b/message.html);
+        }
+           
+    </script>
+    </head>  
+    <body>    
+        <h1 align="center">VOTER ID Registration Page</h1>
+        <form name="RegForm"  onsubmit="return checkDetails()" method="post" action="message.html">
+            <table>
+                <tr>
+                    <td>NAME</td>
+                    <td><input type="text" name="fname" size="20" placeholder="Enter Name"></td>
+                </tr>
+                <tr>
+                    <td>SUR NAME</td>
+                    <td><input type="text" name="surname" size="20" placeholder="EnterSurName"></td>
+                </tr>
+                <tr>
+                    <td>AGE</td>
+                    <td><input type="number" name="age" min="18" max="100" placeholder="Age"></td>
+                </tr>
+                <tr>
+                    <td>GENDER(M/F)</td>
+                    <td><input type="text" name="gender" size="1" placeholder="sex"></td>
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td><input type="date" name="dob" placeholder="Enter dob"></td>
+                </tr>
+                 <tr>
+                    <td>Aadhar Number</td>
+                    <td><input type="number" name="aano" min="100000000000" max="999999999999" placeholder="EnterAadharNo"></td>
+                </tr>
+                    <td><input type="submit" value="submit" name="Submit" onclick="Submit()">
+                                <input type="reset" value="Reset" name="Reset"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+           
+ 
+       
